@@ -23,7 +23,7 @@ $(window).scroll(function (event) {
     }
 
     lastScrollTop = currentScroll
-});
+})
 
 $('#hamburger').click(function(){
     $(this).toggleClass('ham-open')

@@ -6,6 +6,10 @@
     /* box-sizing: border-box; */
 }
 
+:root{
+    --btn-curve: cubic-bezier(0, 0, 0.08, 0.96);
+}
+
 body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -97,7 +101,7 @@ header {
     background-position-y: 100%;
     background-position-x: 100%;
     background-repeat: no-repeat;
-    transition: background-size 0.4s cubic-bezier(0, 0, 0.08, 0.96);
+    transition: background-size 0.4s var(--btn-curve);
 }
 .nav-item a:hover,
 .nav-item a:focus,
@@ -120,7 +124,8 @@ header {
     height: 2px;
     margin-bottom: 2px;
     background-color: white;
-    transition: all .3s ease;
+
+    transition: all .3s var(--btn-curve);
 }
 .bar1, .bar2, .bar3{
     transform-origin: center;
@@ -153,6 +158,8 @@ header {
     padding: 80px 40px;
     text-align: right;
     background-color: black;
+
+    transition: right .7s cubic-bezier(0, 0.7, 0.21, 1);
 }
 .menu-open{
     right: 0;
@@ -232,7 +239,7 @@ header {
     background-position-y: 0%;
     background-repeat: no-repeat;
 
-    transition: all .3s cubic-bezier(0, 0, 0.08, 0.96), background-position-y 0s;
+    transition: all .3s var(--btn-curve), background-position-y 0s;
 }
 .hero-btn:hover{
     background-size: 100% 100%;
